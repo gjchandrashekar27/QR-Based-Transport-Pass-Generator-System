@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Smart Travel Pass</title>
+    <link rel="stylesheet" th:href="@{/css/get-pass.css}">
+</head>
+<body>
+    <div class="pass-container">
+        <div class="card">
+            <h2>🎫 Your Travel Pass</h2>
+
+            <div class="details">
+                <p><strong>👤 Name:</strong> <span th:text="${user.fullName}">John Doe</span></p>
+                <p><strong>🆔 Aadhaar:</strong> <span th:text="${user.aadhaarNumber}">123456789012</span></p>
+                <p><strong>💼 Occupation:</strong> <span th:text="${user.occupation}">Student</span></p>
+                <p><strong>📧 Email:</strong> <span th:text="${user.email}">john@example.com</span></p>
+                <p><strong>📱 Phone:</strong> <span th:text="${user.phone}">9876543210</span></p>
+                <p><strong>📍 From:</strong> <span th:text="${user.fromLocation}">Tumkur</span></p>
+                <p><strong>➡️ To:</strong> <span th:text="${user.toLocation}">Bangalore</span></p>
+                <p><strong>🕒 Pass Type:</strong> <span th:text="${user.passType}">WEEKLY</span></p>
+            </div>
+
+            <div class="actions">
+                <a href="#" class="btn">📥 Download Pass</a>
+                <a href="#" class="btn">🔍 View QR Code</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

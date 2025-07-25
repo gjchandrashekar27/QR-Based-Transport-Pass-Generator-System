@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Transport Pass Generator</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <style>
+        /* Advantages Boxes */
+        .advantages-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            margin: 40px 0;
+        }
+        .advantage-box {
+            background: linear-gradient(135deg, #e3f0ff 0%, #cce0ff 100%);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,123,255,0.10);
+            padding: 28px 20px;
+            width: 220px;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .advantage-box:hover {
+            transform: translateY(-6px) scale(1.04);
+            box-shadow: 0 8px 24px rgba(0,123,255,0.18);
+        }
+        .advantage-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 16px;
+        }
+        .advantage-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .advantage-desc {
+            font-size: 0.98rem;
+            color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-title">🚍 Transport Pass Generator System</div>
+        <div class="header-actions">
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        </div>
+    </header>
+    <main class="main-content">
+        <section class="dashboard-container">
+            <div class="card">
+                <h1>Welcome to QR-Based Transport Pass Generator</h1>
+                <p>Generate your Daily, Weekly, or Monthly travel pass with ease.<br>
+                Secure, real-time, and paperless!</p>
+                <a href="/register" class="action-button">🎫 Get Your Pass</a>
+            </div>
+        </section>
+        <section class="advantages-boxes">
+            <div class="advantage-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="QR" class="advantage-icon">
+                <div class="advantage-title">Instant QR Pass</div>
+                <div class="advantage-desc">Generate your pass instantly with QR code technology.</div>
+            </div>
+            <div class="advantage-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Realtime" class="advantage-icon">
+                <div class="advantage-title">Real-Time Verification</div>
+                <div class="advantage-desc">Your pass is verified in real time for secure travel.</div>
+            </div>
+            <div class="advantage-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" alt="Security" class="advantage-icon">
+                <div class="advantage-title">Secure & Tamper-Proof</div>
+                <div class="advantage-desc">Digital passes are protected and cannot be forged.</div>
+            </div>
+            <div class="advantage-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="User Friendly" class="advantage-icon">
+                <div class="advantage-title">User Friendly</div>
+                <div class="advantage-desc">Simple interface for all age groups and easy navigation.</div>
+            </div>
+            <div class="advantage-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="Eco Friendly" class="advantage-icon">
+                <div class="advantage-title">Eco Friendly</div>
+                <div class="advantage-desc">No paper required, helping save the environment.</div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        &copy; 2025 Transport Pass Generator System. All rights reserved.
+    </footer>
+</body>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Success</title>
+    <link rel="stylesheet" th:href="@{/css/success.css}">
+</head>
+<body>
+    <div class="success-container">
+        <h1>✅ Registration Successful!</h1>
+        <p th:text="${message}">Your transport pass has been registered successfully.</p>
+        <a href="/" class="home-link">🏠 Back to Home</a>
+    </div>
+
+    <script th:src="@{/js/success.js}"></script>
+</body>
+</html>

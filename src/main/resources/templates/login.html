@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Smart Pass System</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+    <header class="header">
+        <div class="header-title">🚍 Transport Pass Generator System</div>
+        <div class="header-actions">
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        </div>
+    </header>
+    <main class="main-content">
+        <section class="dashboard-container">
+            <div class="card">
+                <h2>🔐 Login</h2>
+                <div class="instructions">
+                    <ul>
+                        <li>Enter your registered Aadhaar number and email.</li>
+                        <li>Both fields are required for login verification.</li>
+                        <li>If you do not have a pass, please register first.</li>
+                    </ul>
+                </div>
+                <form action="#" th:action="@{/login}" th:object="${user}" method="post" onsubmit="return validateLoginForm()">
+                    <div th:if="${error}" class="error-msg" th:text="${error}"></div>
+
+                    <label for="aadhaarNumber">Aadhaar Number</label>
+                    <input type="text" id="aadhaarNumber" th:field="*{aadhaarNumber}" placeholder="Enter Aadhaar Number" required>
+                    <span class="verified-msg" id="aadhaar-verified"></span>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" th:field="*{email}" placeholder="Enter Email" required>
+                    <span class="verified-msg" id="email-verified"></span>
+
+                    <button type="submit" class="action-button">Login</button>
+
+                    <p class="redirect">Don't have a pass? <a th:href="@{/register}">Register here</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        &copy; 2025 Transport Pass Generator System. All rights reserved.
+    </footer>
+    <script th:src="@{/js/login.js}"></script>
+</body>
+</html>
